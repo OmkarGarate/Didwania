@@ -350,8 +350,22 @@ useEffect(() => {
       }
   };
   var rzp1 = new window.Razorpay(options);
-      rzp1.open();
-      e.preventDefault();
+  if( productIds, // Changed from productIds to productData
+    firstName,
+    lastName,
+    country,
+    address: address,
+    city: city,
+    state: selectedState,
+    pincode: pincode,
+    phoneNumber: phoneNumber,
+    email: email,
+    totalPrice: totalAmount,
+    status: 'Pending')
+  { 
+    rzp1.open();
+    e.preventDefault();
+  }
   
   }
   
@@ -524,9 +538,9 @@ useEffect(() => {
               {/* <Link to={'/order'} style={{ textDecoration: "none", cursor: "pointer" }}> */}
               {error ? <p className="error">Failed to submit the form. Please check the details.</p> : error === false ? <p className="success">
                 Order placed successfully</p> : ""}
-                <div className="cartCheckoutBtn">
+                {/* <div className="cartCheckoutBtn"> */}
                   <button onClick={paymentHandler}>Place Order</button>
-                </div>
+                {/* </div> */}
               {/* </Link> */}
             </div>
           </div>
