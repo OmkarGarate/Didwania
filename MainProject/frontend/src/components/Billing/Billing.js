@@ -350,22 +350,10 @@ useEffect(() => {
       }
   };
   var rzp1 = new window.Razorpay(options);
-  if( productIds, // Changed from productIds to productData
-    firstName,
-    lastName,
-    country,
-    address: address,
-    city: city,
-    state: selectedState,
-    pincode: pincode,
-    phoneNumber: phoneNumber,
-    email: email,
-    totalPrice: totalAmount,
-    status: 'Pending')
-  { 
+  
     rzp1.open();
     e.preventDefault();
-  }
+  
   
   }
   
