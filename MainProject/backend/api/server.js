@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: ["https://www.didwaniacreations.in"],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
 
